@@ -1,0 +1,131 @@
+{
+	"conexionUsuarios": [
+		{
+			"mes" : "Enero",
+			"cantidad": 100
+		},
+		{
+			"mes" : "Febrero",
+			"cantidad": 56
+		},
+		{
+			"mes" : "Marzo",
+			"cantidad": 20
+		},
+		{
+			"mes" : "Abril",
+			"cantidad": 25
+		},
+		{
+			"mes" : "Mayo",
+			"cantidad": 67
+		},
+		{
+			"mes" : "Junio",
+			"cantidad": 232
+		},
+		{
+			"mes" : "Julio",
+			"cantidad": 403
+		},
+		{
+			"mes" : "Agosto",
+			"cantidad": 309
+		},
+		{
+			"mes" : "Septiembre",
+			"cantidad": 107
+		},
+		{
+			"mes" : "Octubre",
+			"cantidad": 30
+		},
+		{
+			"mes" : "Noviembre",
+			"cantidad": 90
+		},
+		{
+			"mes" : "Diciembre",
+			"cantidad": 230
+		}
+	],
+	"plataformasUtilizadas": {
+		"android" : 100,
+		"ios" : 0
+	},
+	"interaccionUsuarios": [
+		{
+			"hora" : "00:00",
+			"tiempo" : 1
+		},
+		{
+			"hora" : "04:00",
+			"tiempo" : 0
+		},
+		{
+			"hora" : "08:00",
+			"tiempo" : 1
+		},
+		{
+			"hora" : "12:00",
+			"tiempo" : 2
+		},
+		{
+			"hora" : "16:00",
+			"tiempo" : 5
+		},
+		{
+			"hora" : "20:00",
+			"tiempo" : 3
+		}
+	],
+	"retencionUsuarios": [
+	{
+			"mes" : "Enero",
+			"porcentaje": 30
+		},
+		{
+			"mes" : "Febrero",
+			"porcentaje": 24
+		},
+		{
+			"mes" : "Marzo",
+			"porcentaje": 14
+		},
+		{
+			"mes" : "Abril",
+			"porcentaje": 45
+		},
+		{
+			"mes" : "Mayo",
+			"porcentaje": 67
+		},
+		{
+			"mes" : "Junio",
+			"porcentaje": 78
+		},
+		{
+			"mes" : "Julio",
+			"porcentaje": 89
+		},
+		{
+			"mes" : "Agosto",
+			"porcentaje": 67
+		},
+		{
+			"mes" : "Septiembre",
+			"porcentaje": 34
+		},
+		{
+			"mes" : "Octubre",
+			"porcentaje": 45
+		},
+		{
+			"mes" : "Noviembre",
+			"porcentaje": 68
+		},
+		{
+			"mes" : "Diciembre",
+			"porcentaje": 79
+		}]
+}
