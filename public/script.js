@@ -32,17 +32,19 @@ function login(){
   var userPass = document.getElementById("pass").value;
   //admin1234 contraseña
 
-  if (userEmail === "admin@gmail.com") {
+  if (userEmail === "manager@gmail.com") {
 
     firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
 
-      window.alert("Error : " + errorMessage);
+      swal("Contraseña incorrecta");
+
+      //window.alert("Error : " + errorMessage);
     });
   } else {
-    console.log("Usuario incorrecto");
+    swal("Correo incorrecto");
   }
 
 }
