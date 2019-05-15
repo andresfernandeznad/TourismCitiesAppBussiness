@@ -14,7 +14,7 @@ input, button {
 .login {
 	width: 20%;
 	margin: 0px auto;
-	margin-top: 150px;
+	margin-top: 20px;
 	padding: 20px;
 }
 
@@ -29,6 +29,10 @@ input, button {
 ul button {
 	margin-left: 20px !important;
 	margin-top: 10px !important;
+}
+
+#puntero {
+	margin: 0px auto;
 }
 
 .login input {

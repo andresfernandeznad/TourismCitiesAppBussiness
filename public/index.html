@@ -5,15 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title></title>
   <link rel="stylesheet" href="estilos.css">
+  <script src="snap/snap.svg-min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
   <script src="script.js" type="text/javascript" charset="utf-8" async defer></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 <body>
 
-  <div class="login" id="loginDiv">
-    <h3>Manager login</h3>
+  <div class="login">
+    <div id="puntero"></div>
+    <h3>Manager Login</h3>
     <input type="email" placeholder="Email..." id="email">
     <input type="password" placeholder="Contraseña..." id="pass">
     <button class="btn btn-primary" onclick="login()">Login to Account</button>

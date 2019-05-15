@@ -54,3 +54,14 @@ function logout(){
   console.log("Aaaaa");
   document.getElementById("loginDiv").style.display = "block";
 }
+
+window.onload = function () {
+  var s = Snap("#puntero");
+  Snap.load("snap/tourismIconAni.svg", function(f) {
+    circulo = f.select("#circulo");
+    parteSuperior = f.select("#parteSuperior");
+    parteInferior = f.select("#parteInferior");
+    puntero = f.select("#puntero");
+    s.append(f);
+  });
+}
