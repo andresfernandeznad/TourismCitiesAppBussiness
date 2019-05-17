@@ -28,7 +28,6 @@
      transform="translate(-31.950198,-55.573363)"
      id="layer1">
     <g
-	transform="translate(0,0)"
        id="puntero">
       <ellipse
          style="fill:#0073a4;fill-opacity:1;stroke:none;stroke-width:0.26875055"
@@ -125,13 +124,13 @@
        id="rect4682"
        style="fill:#ffffff;stroke:#ffffff;stroke-width:0.3198961" />
     <rect
-       transform="rotate(75.487794)"
-       y="-115.95714"
-       x="171.34914"
-       height="151.20868"
-       width="8.3336859"
+       transform="matrix(0.2234584,0.97471347,-0.9598485,0.2805189,0,0)"
+       y="-109.32144"
+       x="173.68053"
+       height="115.86949"
+       width="7.1002731"
        id="rect4684"
-       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.62434894" />
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.50447839" />
     <rect
        ry="0"
        transform="matrix(0.69367528,-0.72028786,0.82748284,0.56149101,0,0)"
@@ -161,6 +160,14 @@
        id="path1436"
        d="m 89.718298,134.49992 3.543996,-5.23325 24.771976,16.87542 -8.19735,2.09068 z"
        style="fill:#ffffff;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1" />
+    <path
+       id="path867"
+       d="m 31.973822,171.14758 0.307105,7.70127 2.645833,-0.77958 -1.724516,-7.1343 z"
+       style="fill:#ffffff;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.94117647" />
+    <path
+       id="path869"
+       d="m 144.77609,145.89405 1.27567,-0.30711 -0.0709,-6.80357 -0.14174,-1.13393 -3.07106,1.01581 z"
+       style="fill:#ffffff;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
   </g>
   <g
      transform="translate(0,13.999964)"

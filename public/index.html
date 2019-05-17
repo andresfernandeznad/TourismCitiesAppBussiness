@@ -13,10 +13,13 @@
 
 </head>
 <body>
-
+  <div id="contenedorVideo"></div>
+        <video autoplay muted loop id="myVideo">
+            <source src="video/fondo.mp4" type="video/mp4">
+        </video>
   <div class="login">
     <div id="puntero"></div>
-    <h3>Manager Login</h3>
+    <h3 style="color: white;">Manager Login</h3>
     <input type="email" placeholder="Email..." id="email">
     <input type="password" placeholder="Contraseña..." id="pass">
     <button class="btn btn-primary" onclick="login()">Login to Account</button>

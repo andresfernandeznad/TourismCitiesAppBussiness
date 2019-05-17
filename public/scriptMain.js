@@ -157,6 +157,124 @@ var data;
 $.getJSON("https://tourism-cities.firebaseapp.com/informacion/actividadUsuarios.json", function(result) {
   //console.log(result)
   data = result;
+  var myChart = new Chart(usuariosConGraf, {
+    type: 'bar',
+    data: {
+        labels: [data.conexionUsuarios[0].mes, data.conexionUsuarios[1].mes, data.conexionUsuarios[2].mes, data.conexionUsuarios[3].mes, data.conexionUsuarios[4].mes, data.conexionUsuarios[5].mes, data.conexionUsuarios[6].mes, data.conexionUsuarios[7].mes, data.conexionUsuarios[8].mes, data.conexionUsuarios[9].mes, data.conexionUsuarios[10].mes, data.conexionUsuarios[11].mes],
+        datasets: [{
+            label: 'Número de usuarios conectados',
+            data: [data.conexionUsuarios[0].cantidad, data.conexionUsuarios[1].cantidad, data.conexionUsuarios[2].cantidad, data.conexionUsuarios[3].cantidad, data.conexionUsuarios[4].cantidad, data.conexionUsuarios[5].cantidad, data.conexionUsuarios[6].cantidad, data.conexionUsuarios[7].cantidad, data.conexionUsuarios[8].cantidad, data.conexionUsuarios[9].cantidad, data.conexionUsuarios[10].cantidad, data.conexionUsuarios[11].cantidad, ],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+var chart2 = new Chart(plataformasUtilGraf, {
+  type: 'doughnut',
+  data: {
+      labels: [
+        "Android",
+        "IOS"
+        ],
+      datasets: [{
+        data: [data.plataformasUtilizadas.android , data.plataformasUtilizadas.ios],
+        backgroundColor: [
+        'rgba(0, 0, 255, 0.4)',
+        'rgba(255, 0, 0, 0.4)'
+        ]
+      }]  
+
+  },
+  options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+var chart3 = new Chart(interaccionGraf, {
+  type: 'line',
+  data: {
+      labels: [
+        data.interaccionUsuarios[0].hora, data.interaccionUsuarios[1].hora, data.interaccionUsuarios[2].hora, data.interaccionUsuarios[3].hora, data.interaccionUsuarios[4].hora, data.interaccionUsuarios[5].hora
+        ],
+      datasets: [{
+        data: [data.interaccionUsuarios[0].tiempo, data.interaccionUsuarios[1].tiempo, data.interaccionUsuarios[2].tiempo, data.interaccionUsuarios[3].tiempo, data.interaccionUsuarios[4].tiempo, data.interaccionUsuarios[5].tiempo],
+        label: "Minutos",
+        borderColor: '#A8159E',
+        fill: false
+      }]  
+
+  },
+  options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+var chart4 = new Chart(retencionGraf, {
+  type: 'horizontalBar',
+    data: {
+      labels: [data.retencionUsuarios[0].mes, data.retencionUsuarios[1].mes, data.retencionUsuarios[2].mes, data.retencionUsuarios[3].mes, data.retencionUsuarios[4].mes, data.retencionUsuarios[5].mes, data.retencionUsuarios[6].mes, data.retencionUsuarios[7].mes, data.retencionUsuarios[8].mes, data.retencionUsuarios[9].mes, data.retencionUsuarios[10].mes, data.retencionUsuarios[11].mes],
+      datasets: [
+        {
+          label: "Porcentaje de retención de usuarios",
+          backgroundColor: ["#3e95cd", "#8e5ea2", "#3e95cd", "#8e5ea2", "#3e95cd", "#8e5ea2", "#3e95cd", "#8e5ea2", "#3e95cd", "#8e5ea2", "#3e95cd", "#8e5ea2"],
+          data: [data.retencionUsuarios[0].porcentaje, data.retencionUsuarios[1].porcentaje, data.retencionUsuarios[2].porcentaje, data.retencionUsuarios[3].porcentaje, data.retencionUsuarios[4].porcentaje, data.retencionUsuarios[5].porcentaje, data.retencionUsuarios[6].porcentaje, data.retencionUsuarios[7].porcentaje, data.retencionUsuarios[8].porcentaje, data.retencionUsuarios[9].porcentaje, data.retencionUsuarios[10].porcentaje, data.retencionUsuarios[11].porcentaje]
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Porcentaje de retención de usuarios'
+      }
+    }
+});
 })
 
 function usuariosConectados() {
@@ -205,7 +323,7 @@ var retencionGraf = document.getElementById("retencionGraph");
 plataformasUtilGraf.style.display = "none";
 interaccionGraf.style.display = "none";
 retencionGraf.style.display = "none"
-setTimeout(function() {
+/*setTimeout(function() {
 var myChart = new Chart(usuariosConGraf, {
     type: 'bar',
     data: {
@@ -324,4 +442,4 @@ var chart4 = new Chart(retencionGraf, {
       }
     }
 });
-}, 1000);
+}, 1000);*/
