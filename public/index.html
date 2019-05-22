@@ -3,23 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
   <title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="estilos.css">
   <script src="snap/snap.svg-min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
   <script src="script.js" type="text/javascript" charset="utf-8" async defer></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
 
 </head>
 <body>
+  <div class="banner"></div>
   <div id="contenedorVideo"></div>
         <video autoplay muted loop id="myVideo">
             <source src="video/fondo.mp4" type="video/mp4">
         </video>
   <div class="login">
     <div id="puntero"></div>
-    <h3 style="color: white;">Manager Login</h3>
+    <h3 style="color: white; font-size: 2em;">Manager Login</h3>
     <input type="email" placeholder="Email..." id="email">
     <input type="password" placeholder="Contraseña..." id="pass">
     <button class="btn btn-primary" onclick="login()">Login to Account</button>
