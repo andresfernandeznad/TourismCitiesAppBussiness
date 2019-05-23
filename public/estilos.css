@@ -90,19 +90,63 @@ ul button {
     opacity: 0.8;
 }
 
+#imagen {
+	display: none;
+	height: 150px;
+}
+
 .banner {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 30%;
-    height: 0px;
-    border-right: 60px solid transparent;
-    border-top: 180px solid #428bca;
-    opacity: 0.5;
+	width: 40%;
+	height: 0px;
+	border-right: 60px solid transparent;
+	border-top: 180px solid #428bca;
+	opacity: 0.5;
 }
 
-@media screen and (max-width: 768px) {
+.contenedor {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 40%;
+	height: 180px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#titulo {
+	z-index: 2;
+	font-family: 'Nunito', sans-serif;
+	color: whitesmoke;
+	font-size: 2.3em;
+	width: 50%;
+}
+
+@media screen and (max-width: 1000px) {
   .login {
   	width: 80% !important;
-  }
+	}
+	
+	.contenedor {
+		position: relative;
+		width: 100%;
+		background-color: #428bca8e;
+	}
+
+	.banner {
+		border: none;
+	}
+
+	#imagen {
+		display: inline-block;
+		width: 50%;
+	}
+
+	.punteroC {
+		display: none;
+	}
 }

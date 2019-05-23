@@ -31,8 +31,8 @@ function exportarPDF() {
   } else if (activo === "interaccion") {
     data.interaccionUsuarios.forEach(function(value, i){
       doc.text(20, 10 + (i * 10),
-        "Hora: " + value.mes + " " +
-        "Tiempo: " + value.porcentaje);
+        "Hora: " + value.hora + " " +
+        "Tiempo: " + value.tiempo);
     });
     doc.save('InteraccionUsuarios.pdf');
   } else if (activo === "retencion") {
@@ -71,15 +71,15 @@ function JSONToCSVConvertor(JSONData, ReportTitle, ShowLabel) {
   if (ShowLabel) {
     var row = "";
      if (ReportTitle === "Porcentaje plataformas utilizadas") {
-       row += "plataforma, porcentaje \n"
-       row += "Android," + arrData.android + "\n";
-       row += "IOS," + arrData.ios + "\n"; 
+       row += "plataforma; porcentaje \n"
+       row += "Android;" + arrData.android + "\n";
+       row += "IOS;" + arrData.ios + "\n"; 
      } else {
          //This loop will extract the label from 1st index of on array
       for (var index in arrData[0]) {
 
         //Now convert each value to string and comma-seprated
-        row += index + ',';
+        row += index + ';';
       }
     }
    
@@ -95,7 +95,7 @@ function JSONToCSVConvertor(JSONData, ReportTitle, ShowLabel) {
 
     //2nd loop will extract each column and convert it in string comma-seprated
     for (var index in arrData[i]) {
-      row += '"' + arrData[i][index] + '",';
+      row += '"' + arrData[i][index] + '";';
     }
 
     row.slice(0, row.length - 1);

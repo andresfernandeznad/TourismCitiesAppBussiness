@@ -57,11 +57,20 @@ function logout(){
 
 window.onload = function () {
   var s = Snap("#puntero");
+  var i = Snap("#imagen");
   Snap.load("snap/tourismIconAni.svg", function(f) {
     circulo = f.select("#circulo");
     parteSuperior = f.select("#parteSuperior");
     parteInferior = f.select("#parteInferior");
     puntero = f.select("#puntero");
     s.append(f);
+  });
+
+  Snap.load("snap/tourismIconAni.svg", function(f) {
+    circulo = f.select("#circulo");
+    parteSuperior = f.select("#parteSuperior");
+    parteInferior = f.select("#parteInferior");
+    imagen = f.select("#puntero");
+    i.append(f);
   });
 }

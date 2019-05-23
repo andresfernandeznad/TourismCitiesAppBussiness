@@ -15,14 +15,18 @@
 
 </head>
 <body>
-  <div class="banner"></div>
+  <div class="contenedor">
+    <div class="banner"></div>
+    <div id="imagen"></div>
+    <div id="titulo">Tourism Cities</div>
+  </div>
   <div id="contenedorVideo"></div>
         <video autoplay muted loop id="myVideo">
             <source src="video/fondo.mp4" type="video/mp4">
         </video>
   <div class="login">
-    <div id="puntero"></div>
-    <h3 style="color: white; font-size: 2em;">Manager Login</h3>
+    <div class="punteroC" id="puntero"></div>
+    <h3 style="color: white; font-size: 2em; margin-bottom: 30px; margin-top: 20px;">Manager Login</h3>
     <input type="email" placeholder="Email..." id="email">
     <input type="password" placeholder="Contraseña..." id="pass">
     <button class="btn btn-primary" onclick="login()">Login to Account</button>
