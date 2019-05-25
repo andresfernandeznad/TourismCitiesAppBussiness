@@ -23,10 +23,15 @@ function exportarPDF() {
         "Mes: " + value.mes + " " +
         "Cantidad: " + value.cantidad);
     });
+    var newCanvasImg = usuariosConGraf.toDataURL("image/png", 1.0);
+    doc.addImage(newCanvasImg, 'PNG', 10, 150, 180, 50 )
     doc.save('UsuariosConectados.pdf');
   } else if (activo === "plataformas") {
     doc.text("Android: " + data.plataformasUtilizadas.android + "% " +
-            "IOS: " + data.plataformasUtilizadas.ios + "%",20, 10);
+            "IOS: " + data.plataformasUtilizadas.ios + "%" + 
+            "Windows Phone: " + data.plataformasUtilizadas.windowsphone + "%",20, 10);
+    var newCanvasImg = plataformasUtilGraf.toDataURL("image/png", 1.0);
+    doc.addImage(newCanvasImg, 'PNG', 10, 50, 180, 50 )
     doc.save('PorcentajePlataformasUtilizadas.pdf');
   } else if (activo === "interaccion") {
     data.interaccionUsuarios.forEach(function(value, i){
@@ -34,6 +39,8 @@ function exportarPDF() {
         "Hora: " + value.hora + " " +
         "Tiempo: " + value.tiempo);
     });
+    var newCanvasImg = interaccionGraf.toDataURL("image/png", 1.0);
+    doc.addImage(newCanvasImg, 'PNG', 10, 100, 180, 50 )
     doc.save('InteraccionUsuarios.pdf');
   } else if (activo === "retencion") {
     data.retencionUsuarios.forEach(function(value, i){
@@ -41,6 +48,8 @@ function exportarPDF() {
         "Mes: " + value.mes + " " +
         "Porcentaje: " + value.porcentaje);
     });
+    var newCanvasImg = retencionGraf.toDataURL("image/png", 1.0);
+    doc.addImage(newCanvasImg, 'PNG', 10, 150, 180, 50 )
     doc.save('RetencionUsuarios.pdf');
   }
 }
@@ -74,6 +83,7 @@ function JSONToCSVConvertor(JSONData, ReportTitle, ShowLabel) {
        row += "plataforma; porcentaje \n"
        row += "Android;" + arrData.android + "\n";
        row += "IOS;" + arrData.ios + "\n"; 
+       row += "Windows phone;" + arrData.windowsphone + "\n"; 
      } else {
          //This loop will extract the label from 1st index of on array
       for (var index in arrData[0]) {
@@ -210,10 +220,11 @@ var chart2 = new Chart(plataformasUtilGraf, {
   data: {
       labels: [
         "Android",
-        "IOS"
+        "IOS",
+        "Windows phone"
         ],
       datasets: [{
-        data: [data.plataformasUtilizadas.android , data.plataformasUtilizadas.ios],
+        data: [data.plataformasUtilizadas.android , data.plataformasUtilizadas.ios, data.plataformasUtilizadas.windowsphone],
         backgroundColor: [
         'rgba(0, 0, 255, 0.4)',
         'rgba(255, 0, 0, 0.4)'

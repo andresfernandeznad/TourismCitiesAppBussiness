@@ -50,8 +50,9 @@
 		}
 	],
 	"plataformasUtilizadas": {
-		"android" : 100,
-		"ios" : 0
+		"android" : 70,
+		"ios" : 20,
+		"windowsphone" : 10
 	},
 	"interaccionUsuarios": [
 		{
