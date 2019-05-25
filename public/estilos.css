@@ -33,7 +33,7 @@ ul button {
 }
 
 #puntero {
-	width: 35%;
+	width: 30%;
 	margin: 0px auto;
 }
 
@@ -148,5 +148,9 @@ ul button {
 
 	.punteroC {
 		display: none;
+	}
+
+	canvas {
+		margin-top: 100px;
 	}
 }
