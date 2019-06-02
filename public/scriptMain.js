@@ -73,8 +73,6 @@ function JSONToCSVConvertor(JSONData, ReportTitle, ShowLabel) {
   var CSV = '';
 
   CSV += ReportTitle + '\r\n\n';
-
-  //This condition will generate the Label/Header
   if (ShowLabel) {
     var row = "";
     if (ReportTitle === "Porcentaje plataformas utilizadas") {
@@ -108,24 +106,17 @@ function JSONToCSVConvertor(JSONData, ReportTitle, ShowLabel) {
     alert("Invalid data");
     return;
   }
-
-  //Generate a file name
   var fileName = "";
-  //this will remove the blank-spaces from the title and replace it with an underscore
+  //Borra espacios en blanco
   fileName += ReportTitle.replace(/ /g, "_");
 
-  //Initialize file format you want csv or xls
   var uri = 'data:text/csv;charset=utf-8,' + escape(CSV);
 
-  //this trick will generate a temp <a /> tag
+  //Genera un enlace temporal para descargar el archivo
   var link = document.createElement("a");
   link.href = uri;
-
-  //set the visibility hidden so it will not effect on your web-layout
   link.style = "visibility:hidden";
   link.download = fileName + ".csv";
-
-  //this part will append the anchor tag and remove it after automatic click
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -150,7 +141,6 @@ firebase.auth().onAuthStateChanged(function (user) {
 });
 var data;
 $.getJSON("https://tourism-cities.firebaseapp.com/informacion/actividadUsuarios.json", function (result) {
-  //console.log(result)
   data = result;
   var myChart = new Chart(usuariosConGraf, {
     type: 'bar',
